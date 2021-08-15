@@ -1,0 +1,19 @@
+{
+    "name": "villaflor/taboola-sdk",
+    "description": "This package contains the open source PHP SDK that allows you to access the Taboola Platform from you PHP application.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Villaflor\\TaboolaSDK\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Anthony Villaflor",
+            "email": "villaflor@live.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
