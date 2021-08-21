@@ -5,13 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Villaflor\\TaboolaSDK\\": "src/"
+            "Villaflor\\TaboolaSDK\\": "src"
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/"
-        ]
+        "psr-4": {
+            "Villaflor\\TaboolaSDK\\Tests\\": "tests"
+        }
     },
     "authors": [
         {
@@ -21,14 +21,16 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-      "phpunit/phpunit": "^9.5",
-      "phpmd/phpmd": "@stable",
-      "friendsofphp/php-cs-fixer": "^3.0"
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpmd/phpmd": "@stable",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest"
     },
     "require": {
-      "php": "^7.4|^8.0",
-      "guzzlehttp/guzzle": "^7.3",
-      "ext-json": "*"
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "villaflor/connection": "^1.0"
     },
     "config": {
         "preferred-install": "dist",
