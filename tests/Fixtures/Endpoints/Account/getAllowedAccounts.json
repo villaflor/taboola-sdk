@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "id": 1163,
+      "name": "Advertiser 1",
+      "account_id": "advertiser-1",
+      "partner_types": [
+        "PUBLISHER",
+        "ADVERTISER"
+      ],
+      "type": "PARTNER",
+      "campaign_types": [
+        "PAID"
+      ],
+      "currency": "USD",
+      "time_zone_name": "US/Eastern"
+    },
+    {
+      "id": 1164,
+      "name": "Advertiser 2",
+      "account_id": "advertiser-2",
+      "partner_types": [
+        "PUBLISHER",
+        "ADVERTISER"
+      ],
+      "type": "PARTNER",
+      "campaign_types": [
+        "PAID"
+      ],
+      "currency": "USD",
+      "time_zone_name": "US/Eastern"
+    }
+  ],
+  "metadata": {
+
+  }
+}
