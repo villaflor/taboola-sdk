@@ -22,6 +22,14 @@ class Account implements APIInterface
         $accountDetails = $this->adapter->get('users/current/account');
         $this->body = json_decode($accountDetails->getBody());
 
-        return (object)['result' => $this->body];
+        return (object)['body' => $this->body];
+    }
+
+    public function getAdvertiserAccountsInNetwork(string $accountID)
+    {
+        $accounts = $this->adapter->get($accountID . '/advertisers');
+        $this->body = json_decode($accounts->getBody());
+
+        return (object)['results' => $this->body->results, 'metadata' => $this->body->metadata];
     }
 }
