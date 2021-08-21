@@ -57,4 +57,25 @@ class AccountTest extends TestCase
         $this->assertEquals('1306', $account->getBody()->results[0]->id);
         $this->assertEquals('1307', $account->getBody()->results[1]->id);
     }
+
+    public function testGetAllowedAccounts()
+    {
+        $response = $this->getPsr7JsonResponseForFixture('Endpoints/Account/getAllowedAccounts.json');
+
+        $this->mock->method('get')->willReturn($response);
+        $this->mock->expects($this->once())->method('get');
+
+        $account = new Account($this->mock);
+
+        $result = $account->getAllowedAccounts();
+
+        $this->assertObjectHasAttribute('results', $result);
+        $this->assertObjectHasAttribute('metadata', $result);
+
+        $this->assertEquals('1163', $result->results[0]->id);
+        $this->assertEquals('1164', $result->results[1]->id);
+
+        $this->assertEquals('1163', $account->getBody()->results[0]->id);
+        $this->assertEquals('1164', $account->getBody()->results[1]->id);
+    }
 }

@@ -25,9 +25,17 @@ class Account implements APIInterface
         return (object)['body' => $this->body];
     }
 
-    public function getAdvertiserAccountsInNetwork(string $accountID)
+    public function getAdvertiserAccountsInNetwork(string $accountID): \stdClass
     {
         $accounts = $this->adapter->get($accountID . '/advertisers');
+        $this->body = json_decode($accounts->getBody());
+
+        return (object)['results' => $this->body->results, 'metadata' => $this->body->metadata];
+    }
+
+    public function getAllowedAccounts(): \stdClass
+    {
+        $accounts = $this->adapter->get('users/current/allowed-accounts');
         $this->body = json_decode($accounts->getBody());
 
         return (object)['results' => $this->body->results, 'metadata' => $this->body->metadata];
