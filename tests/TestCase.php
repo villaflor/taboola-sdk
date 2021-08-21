@@ -10,6 +10,7 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 abstract class TestCase extends BaseTestCase
 {
     /**
+     * @SuppressWarnings(PHPMD.StaticAccess)
      * Returns a PSR7 Stream for a given fixture.
      *
      * @param string $fixture The fixture to create the stream for.
