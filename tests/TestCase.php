@@ -1,4 +1,7 @@
 <?php
+
+namespace Villaflor\TaboolaSDK\Tests;
+
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Utils;
 use PHPUnit\Framework\TestCase as BaseTestCase;
