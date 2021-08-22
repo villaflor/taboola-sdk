@@ -3,7 +3,9 @@
 namespace Villaflor\TaboolaSDK\Tests\Endpoints;
 
 use Villaflor\Connection\Adapter\AdapterInterface;
+use Villaflor\Connection\Auth\APIToken;
 use Villaflor\TaboolaSDK\Endpoints\Account;
+use Villaflor\TaboolaSDK\TaboolaClient;
 use Villaflor\TaboolaSDK\Tests\TestCase;
 
 class AccountTest extends TestCase
@@ -12,8 +14,10 @@ class AccountTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->mock = $this->getMockBuilder(AdapterInterface::class)
-            ->disableOriginalConstructor()
+        $this->mock = $this->getMockBuilder(TaboolaClient::class)
+            ->setConstructorArgs([
+                new APIToken('CZ0OAAAAAAAAEdt7AgAAAAAAGAEgAClebYBnbQEAADooMDMyMDg2MmExZWNlYjIyYWJhMjc1OGI4NzJlMGZhNWI5ZDYxN2Q0YkAC::644420::78997c')
+            ])
             ->getMock();
     }
 

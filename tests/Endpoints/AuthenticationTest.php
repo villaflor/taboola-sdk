@@ -2,9 +2,10 @@
 
 namespace Villaflor\TaboolaSDK\Tests\Endpoints;
 
-use Villaflor\Connection\Adapter\AdapterInterface;
+use Villaflor\Connection\Auth\None;
 use Villaflor\TaboolaSDK\Configurations\AuthenticationConfiguration;
 use Villaflor\TaboolaSDK\Endpoints\Authentication;
+use Villaflor\TaboolaSDK\TaboolaClient;
 use Villaflor\TaboolaSDK\Tests\TestCase;
 
 class AuthenticationTest extends TestCase
@@ -13,8 +14,10 @@ class AuthenticationTest extends TestCase
     {
         $response = $this->getPsr7JsonResponseForFixture('Endpoints/Authentication/getAccessToken.json');
 
-        $mock = $this->getMockBuilder(AdapterInterface::class)
-            ->disableOriginalConstructor()
+        $mock = $this->getMockBuilder(TaboolaClient::class)
+            ->setConstructorArgs([
+                new None()
+            ])
             ->getMock();
 
         $mock->method('post')->willReturn($response);
