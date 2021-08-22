@@ -16,7 +16,6 @@ class AuthenticationConfiguration implements ConfigurationsInterface
     {
         //For the Client Credentials flow, grant_type is always client_credentials.
         $this->config['grant_type'] = 'client_credentials';
-
         $this->config['client_id'] = $clientID;
         $this->config['client_secret'] = $clientSecret;
     }
