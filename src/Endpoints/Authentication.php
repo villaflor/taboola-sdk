@@ -6,6 +6,7 @@ use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\APIInterface;
 use Villaflor\Connection\ConfigurationsInterface;
 use Villaflor\Connection\Traits\BodyAccessorTrait;
+use Villaflor\TaboolaSDK\Variables;
 
 class Authentication implements APIInterface
 {
@@ -20,7 +21,8 @@ class Authentication implements APIInterface
 
     public function getAccessToken(ConfigurationsInterface $authenticationConfig): \stdClass
     {
-        $accessToken = $this->adapter->post('oauth/token', $authenticationConfig->getArray(), ['Content-Type' => 'application/x-www-form-urlencoded']);
+        $accessToken = $this->adapter->post(Variables::AUTH_URI, $authenticationConfig->getArray(), ['Content-Type' => 'application/x-www-form-urlencoded']);
+
         $this->body = json_decode($accessToken->getBody());
 
         return (object)['body' => $this->body];
