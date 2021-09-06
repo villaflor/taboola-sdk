@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": "5750752",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 1",
+      "branding_text": "The best brand",
+      "tracking_code": "utm_source=taboola&utm_medium=referral",
+      "pricing_model": "CPC",
+      "cpc": 0.25,
+      "safety_rating": null,
+      "daily_cap": 100,
+      "daily_ad_delivery_model": "STRICT",
+      "spending_limit": 5000,
+      "spending_limit_model": "MONTHLY"
+    },
+    {
+      "id": "5750753",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 2",
+      "branding_text": "A great brand",
+      "tracking_code": "utm_source=taboola&utm_medium=referral",
+      "pricing_model": "CPC",
+      "cpc": 0.4,
+      "safety_rating": null,
+      "daily_cap": 200,
+      "daily_ad_delivery_model": "STRICT",
+      "spending_limit": 5000,
+      "spending_limit_model": "MONTHLY"
+    }
+  ],
+  "metadata": {
+  }
+}
