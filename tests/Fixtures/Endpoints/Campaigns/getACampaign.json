@@ -1,0 +1,60 @@
+{
+  "id": "1",
+  "advertiser_id": "taboola-demo-advertiser",
+  "branding_text": "Pizza",
+  "name": "Demo Campaign",
+  "tracking_code": "taboola-track",
+  "cpc": 0.25,
+  "daily_cap": 100,
+  "spending_limit": 1000,
+  "spending_limit_model": "MONTHLY",
+  "country_targeting": {
+    "type": "INCLUDE",
+    "value": [
+      "AU",
+      "GB"
+    ]
+  },
+  "sub_country_targeting": null,
+  "postal_code_targeting": null,
+  "platform_targeting": {
+    "type": "INCLUDE",
+    "value": [
+      "TBLT",
+      "PHON"
+    ]
+  },
+  "os_targeting": {
+    "type": "ALL",
+    "value": [],
+    "href": null
+  },
+  "publisher_targeting": null,
+  "comments": null,
+  "start_date": "2015-04-30",
+  "end_date": "2015-05-30",
+  "approval_state": "APPROVED",
+  "is_active": true,
+  "spent": 0,
+  "status": "RUNNING",
+  "daily_ad_delivery_model": "STRICT",
+  "traffic_allocation_mode": "EVEN",
+  "marketing_objective": "MOBILE_APP_INSTALL",
+  "activity_schedule": {
+    "mode": "ALWAYS",
+    "rules": [],
+    "time_zone": "US/Eastern"
+  },
+  "publisher_bid_modifier": {
+    "values": [
+      {
+        "target": "publisher1",
+        "cpc_modification": 1.5
+      },
+      {
+        "target": "publisher2",
+        "cpc_modification": 0.9
+      }
+    ]
+  }
+}

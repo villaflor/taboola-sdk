@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "id": 10645,
+      "advertiser_id": 11,
+      "advertiser_name": "demo-advertiser-01",
+      "advertiser_description": "Demo Advertiser 01",
+      "name": "Smart Phones (Mobile)",
+      "branding_text": "demo-brand-01.com",
+      "policy_state": "ENABLED",
+      "status": "RUNNING",
+      "create_time": 1528890919000,
+      "total_spent": 14162.89
+    },
+    {
+      "id": 10447,
+      "advertiser_id": 12,
+      "advertiser_name": "demo-advertiser-02",
+      "advertiser_description": "Demo Advertiser 02",
+      "name": "Training Promotion",
+      "branding_text": "demo-brand-02.com",
+      "policy_state": "ENABLED",
+      "status": "RUNNING",
+      "create_time": 1539079796000,
+      "total_spent": 1389.4
+    }
+  ],
+  "metadata": {
+    "total": 1015,
+    "count": 1015
+  }
+}

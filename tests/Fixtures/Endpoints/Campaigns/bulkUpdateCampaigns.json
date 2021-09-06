@@ -1,0 +1,26 @@
+{
+  "campaigns": [
+    1001,
+    1002,
+    1003
+  ],
+  "update": {
+    "spending_limit": 2000,
+    "cpc": 2,
+    "is_active": false
+  },
+  "country_targeting": {
+    "type": "INCLUDE",
+    "value": [
+      "AU",
+      "GB"
+    ]
+  },
+  "platform_targeting": {
+    "type": "INCLUDE",
+    "value": [
+      "TBLT",
+      "PHON"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "patch_operation": "ADD",
+  "publisher_targeting": null,
+  "publisher_bid_modifier": {
+    "values": [
+      {
+        "target": "publisher1",
+        "cpc_modification": 1.5
+      },
+      {
+        "target": "publisher2",
+        "cpc_modification": 0.9
+      }
+    ]
+  },
+  "publisher_bid_strategy_modifiers": null
+}

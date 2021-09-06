@@ -1,0 +1,44 @@
+{
+  "id": "124",
+  "advertiser_id": "demo-advertiser",
+  "name": "Demo Campaign - New name",
+  "branding_text": "New branding text",
+  "tracking_code": "utm_source=taboola&utm_medium=referral",
+  "pricing_model": "CPC",
+  "cpc": 1.0,
+  "daily_cap": 30.0,
+  "daily_ad_delivery_model": "STRICT",
+  "spending_limit": 10000.0,
+  "spending_limit_model": "ENTIRE",
+  "cpa_goal": 0.0,
+  "country_targeting": {
+    "type": "ALL",
+    "value": [],
+    "href": null
+  },
+  "sub_country_targeting": {
+    "type": "ALL",
+    "value": [],
+    "href": null
+  },
+  "postal_code_targeting": {
+    "type": "ALL",
+    "value": null,
+    "href": "https://backstage.taboola.com/backstage/api/1.0/demo-advertiser/campaigns/124/targeting/postal_code"
+  },
+  "contextual_targeting": {
+    "type": "ALL",
+    "value": [],
+    "href": null
+  },
+  "platform_targeting": {
+    "type": "INCLUDE",
+    "value": ["PHON", "TBLT"],
+    "href": null
+  },
+  "publisher_targeting": {
+    "type": "ALL",
+    "value": [],
+    "href": null
+  }
+}
