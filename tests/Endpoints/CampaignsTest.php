@@ -3,6 +3,8 @@
 namespace Villaflor\TaboolaSDK\Tests\Endpoints;
 
 use Villaflor\Connection\Auth\APIToken;
+use Villaflor\TaboolaSDK\Configurations\Campaigns\AllCampaignsConfiguration;
+use Villaflor\TaboolaSDK\Definitions\AllCampaignsFilterDefinition;
 use Villaflor\TaboolaSDK\Endpoints\Campaigns;
 use Villaflor\TaboolaSDK\TaboolaClient;
 use Villaflor\TaboolaSDK\Tests\TestCase;
@@ -22,6 +24,15 @@ class CampaignsTest extends TestCase
 
     public function testGetAllCampaigns()
     {
+        $filter = [
+            AllCampaignsFilterDefinition::FETCH_LEVEL => AllCampaignsFilterDefinition::FETCH_LEVEL_RECENT_AND_PAUSED_OPTIONS
+        ];
+
+        $config = new AllCampaignsConfiguration($this->accountID, $filter);
+
+        $this->assertEquals($this->accountID . "/campaigns", $config->getPath());
+        $this->assertEquals($filter, $config->getArray());
+
         $response = $this->getPsr7JsonResponseForFixture('Endpoints/Campaigns/getAllCampaigns.json');
 
         $this->mock->method('get')->willReturn($response);
@@ -29,7 +40,7 @@ class CampaignsTest extends TestCase
 
         $campaigns = new Campaigns($this->mock);
 
-        $result = $campaigns->getAllCampaigns('demo-account-001');
+        $result = $campaigns->getAllCampaigns($config);
 
         $this->assertObjectHasAttribute('results', $result);
         $this->assertObjectHasAttribute('metadata', $result);

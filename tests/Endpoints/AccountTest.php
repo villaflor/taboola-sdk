@@ -2,8 +2,11 @@
 
 namespace Villaflor\TaboolaSDK\Tests\Endpoints;
 
-use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\Auth\APIToken;
+use Villaflor\TaboolaSDK\Configurations\Account\AccountDetailsConfiguration;
+use Villaflor\TaboolaSDK\Configurations\Account\AdvertiserAccountsInNetworkConfiguration;
+use Villaflor\TaboolaSDK\Configurations\Account\AllowedAccountsConfiguration;
+use Villaflor\TaboolaSDK\Definitions\URI;
 use Villaflor\TaboolaSDK\Endpoints\Account;
 use Villaflor\TaboolaSDK\TaboolaClient;
 use Villaflor\TaboolaSDK\Tests\TestCase;
@@ -23,14 +26,18 @@ class AccountTest extends TestCase
 
     public function testGetAccountDetails()
     {
+        $config = new AccountDetailsConfiguration();
+
+        $this->assertEquals(URI::ACCOUNT_DETAILS_URI, $config->getPath());
+
         $response = $this->getPsr7JsonResponseForFixture('Endpoints/Account/getAccountDetails.json');
 
         $this->mock->method('get')->willReturn($response);
         $this->mock->expects($this->once())->method('get');
 
         $account = new Account($this->mock);
-        
-        $result = $account->getAccountDetails();
+
+        $result = $account->getAccountDetails($config);
 
         $this->assertObjectHasAttribute('body', $result);
 
@@ -41,6 +48,10 @@ class AccountTest extends TestCase
 
     public function testGetAdvertiserAccountsInNetwork()
     {
+        $config = new AdvertiserAccountsInNetworkConfiguration($this->accountID);
+
+        $this->assertEquals($this->accountID . "/advertisers", $config->getPath());
+
         $response = $this->getPsr7JsonResponseForFixture('Endpoints/Account/getAdvertiserAccountsInNetwork.json');
 
         $this->mock->method('get')->willReturn($response);
@@ -48,7 +59,7 @@ class AccountTest extends TestCase
 
         $account = new Account($this->mock);
 
-        $result = $account->getAdvertiserAccountsInNetwork('demo-account-001');
+        $result = $account->getAdvertiserAccountsInNetwork($config);
 
         $this->assertObjectHasAttribute('results', $result);
         $this->assertObjectHasAttribute('metadata', $result);
@@ -64,6 +75,10 @@ class AccountTest extends TestCase
 
     public function testGetAllowedAccounts()
     {
+        $config = new AllowedAccountsConfiguration();
+
+        $this->assertEquals("users/current/allowed-accounts", $config->getPath());
+
         $response = $this->getPsr7JsonResponseForFixture('Endpoints/Account/getAllowedAccounts.json');
 
         $this->mock->method('get')->willReturn($response);
@@ -71,7 +86,7 @@ class AccountTest extends TestCase
 
         $account = new Account($this->mock);
 
-        $result = $account->getAllowedAccounts();
+        $result = $account->getAllowedAccounts($config);
 
         $this->assertObjectHasAttribute('results', $result);
         $this->assertObjectHasAttribute('metadata', $result);

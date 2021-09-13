@@ -28,11 +28,6 @@ class ReportingTest extends TestCase
 
     public function testCampaignSummaryReport()
     {
-        $response = $this->getPsr7JsonResponseForFixture('Endpoints/Reporting/campaignSummaryReport.json');
-
-        $this->mock->method('get')->willReturn($response);
-        $this->mock->expects($this->once())->method('get');
-
         $filter = [
             CampaignSummaryFilterDefinition::START_DATE => '2021-01-01',
             CampaignSummaryFilterDefinition::END_DATE => '2021-01-01',
@@ -46,6 +41,11 @@ class ReportingTest extends TestCase
 
         $this->assertEquals($this->accountID . "/reports/campaign-summary/dimensions/" . CampaignSummaryDimensionDefinition::CAMPAIGN_DAY_BREAKDOWN, $config->getPath());
         $this->assertEquals($filter, $config->getArray());
+
+        $response = $this->getPsr7JsonResponseForFixture('Endpoints/Reporting/campaignSummaryReport.json');
+
+        $this->mock->method('get')->willReturn($response);
+        $this->mock->expects($this->once())->method('get');
 
         $reporting = new Reporting($this->mock);
 
@@ -65,11 +65,6 @@ class ReportingTest extends TestCase
 
     public function testTopCampaignContentReport()
     {
-        $response = $this->getPsr7JsonResponseForFixture('Endpoints/Reporting/topCampaignContentReport.json');
-
-        $this->mock->method('get')->willReturn($response);
-        $this->mock->expects($this->once())->method('get');
-
         $filter = [
             TopCampaignContentFilterDefinition::START_DATE => '2021-01-01',
             TopCampaignContentFilterDefinition::END_DATE => '2021-01-01',
@@ -83,6 +78,11 @@ class ReportingTest extends TestCase
 
         $this->assertEquals($this->accountID . "/reports/top-campaign-content/dimensions/" . TopCampaignContentDimensionDefinition::ITEM_BREAKDOWN, $config->getPath());
         $this->assertEquals($filter, $config->getArray());
+
+        $response = $this->getPsr7JsonResponseForFixture('Endpoints/Reporting/topCampaignContentReport.json');
+
+        $this->mock->method('get')->willReturn($response);
+        $this->mock->expects($this->once())->method('get');
 
         $reporting = new Reporting($this->mock);
 

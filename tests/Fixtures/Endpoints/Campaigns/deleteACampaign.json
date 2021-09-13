@@ -1,6 +1,6 @@
 {
   "id": "123",
-  "advertiser_id"  : "taboola-demo-advertiser",
+  "advertiser_id": "taboola-demo-advertiser",
   "name": "DemoCampaign",
   "branding_text": "Yummy Pizza",
   "tracking_code": "taboola-tracking-code",
@@ -10,21 +10,30 @@
   "spending_limit_model": "ENTIRE",
   "cpa_goal": 5,
   "country_targeting": {
-    "type"  : "INCLUDE",
-    "value" : ["AU", "GB"],
-    "href" : null
+    "type": "INCLUDE",
+    "value": [
+      "AU",
+      "GB"
+    ],
+    "href": null
   },
   "sub_country_targeting": null,
   "postal_code_targeting": null,
   "contextual_targeting": {
-    "type"  : "INCLUDE",
-    "value" : ["IAB1", "IAB2"],
-    "href" : null
+    "type": "INCLUDE",
+    "value": [
+      "IAB1",
+      "IAB2"
+    ],
+    "href": null
   },
   "platform_targeting": {
-    "type"  : "INCLUDE",
-    "value" : ["TBLT", "PHON"],
-    "href" : null
+    "type": "INCLUDE",
+    "value": [
+      "TBLT",
+      "PHON"
+    ],
+    "href": null
   },
   "publisher_targeting": null,
   "campaign_profile": {
@@ -34,26 +43,28 @@
     "language": "EN",
     "category": "SPORTS"
   },
-  "comments"   : null,
+  "comments": null,
   "start_date": "2015-04-24",
   "end_date": "2015-05-24",
-  "approval_state" : "APPROVED",
+  "approval_state": "APPROVED",
   "is_active": true,
   "spent": 0.0,
-  "bid_type"   : "OPTIMIZED_CONVERSIONS",
+  "bid_type": "OPTIMIZED_CONVERSIONS",
   "status": "TERMINATED",
-  "daily_ad_delivery_model" : "STRICT",
-  "traffic_allocation_mode" : "EVEN",
+  "daily_ad_delivery_model": "STRICT",
+  "traffic_allocation_mode": "EVEN",
   "activity_schedule": {
     "mode": "ALWAYS",
     "rules": [],
     "time_zone": "US/Eastern"
   },
-  "marketing_objective" : "MOBILE_APP_INSTALL",
+  "marketing_objective": "MOBILE_APP_INSTALL",
   "verification_pixel": {
-    "verification_pixel_items": [{"tracking_pixels_type" : "CLICK",
-      "url" : "www.mysite.com"}
+    "verification_pixel_items": [
+      {
+        "tracking_pixels_type": "CLICK",
+        "url": "www.mysite.com"
+      }
     ]
   }
-
 }

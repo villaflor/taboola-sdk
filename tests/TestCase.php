@@ -37,7 +37,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Returns a PSR7 Response (JSON) for a given fixture.
      *
-     * @param string $fixture    The fixture to create the response for.
+     * @param string $fixture The fixture to create the response for.
      * @param integer $statusCode A HTTP Status Code for the response.
      * @return Psr7\Response
      */

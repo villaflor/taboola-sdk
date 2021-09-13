@@ -7,23 +7,40 @@
   "spending_limit": 1000,
   "spending_limit_model": "MONTHLY",
   "country_targeting": {
-    "type"  : "INCLUDE",
-    "value" : ["AU", "GB"]
+    "type": "INCLUDE",
+    "value": [
+      "AU",
+      "GB"
+    ]
   },
   "sub_country_targeting": null,
   "platform_targeting": {
-    "type"  : "INCLUDE",
-    "value" : ["TBLT", "PHON"]
+    "type": "INCLUDE",
+    "value": [
+      "TBLT",
+      "PHON"
+    ]
   },
   "os_targeting": {
     "type": "INCLUDE",
-    "value": [{"os_family": "Android"}]
+    "value": [
+      {
+        "os_family": "Android"
+      }
+    ]
   },
   "publisher_targeting": null,
-  "daily_ad_delivery_model" : "STRICT",
-  "publisher_bid_modifier" : {
-    "values": [{"target"  : "publisher1", "cpc_modification" : 1.5},
-      {"target"  : "publisher2", "cpc_modification" : 0.9}
+  "daily_ad_delivery_model": "STRICT",
+  "publisher_bid_modifier": {
+    "values": [
+      {
+        "target": "publisher1",
+        "cpc_modification": 1.5
+      },
+      {
+        "target": "publisher2",
+        "cpc_modification": 0.9
+      }
     ]
   },
   "activity_schedule": {
@@ -46,15 +63,15 @@
         "day": "SUNDAY",
         "from_hour": "10",
         "until_hour": "22"
-      },
+      }
     ],
     "time_zone": "US/Eastern"
   },
-  "comments"   : null,
+  "comments": null,
   "bid_type": "OPTIMIZED_CONVERSIONS",
-  "marketing_objective" : "MOBILE_APP_INSTALL",
+  "marketing_objective": "MOBILE_APP_INSTALL",
   "start_date": "2015-04-30",
   "end_date": "2015-05-30",
-  "approval_state" : "APPROVED",
+  "approval_state": "APPROVED",
   "is_active": true
 }

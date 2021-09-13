@@ -28,6 +28,6 @@ class TopCampaignContentConfiguration implements ConfigurationsInterface, PathCo
 
     public function getPath(): string
     {
-        return strtr(URI::TOP_CAMPAIGN_CONTENT_URI, $this->pathConfig);
+        return strtr(URI::REPORT_TOP_CAMPAIGN_CONTENT_URI, $this->pathConfig);
     }
 }

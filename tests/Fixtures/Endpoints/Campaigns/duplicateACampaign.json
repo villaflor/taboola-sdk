@@ -33,7 +33,10 @@
   },
   "platform_targeting": {
     "type": "INCLUDE",
-    "value": ["PHON", "TBLT"],
+    "value": [
+      "PHON",
+      "TBLT"
+    ],
     "href": null
   },
   "publisher_targeting": {

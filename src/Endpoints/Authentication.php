@@ -2,6 +2,7 @@
 
 namespace Villaflor\TaboolaSDK\Endpoints;
 
+use stdClass;
 use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\APIInterface;
 use Villaflor\Connection\ConfigurationsInterface;
@@ -19,7 +20,7 @@ class Authentication implements APIInterface
         $this->adapter = $adapter;
     }
 
-    public function getAccessToken(ConfigurationsInterface $authenticationConfig): \stdClass
+    public function getAccessToken(ConfigurationsInterface $authenticationConfig): stdClass
     {
         $accessToken = $this->adapter->post(URI::AUTH_URI, $authenticationConfig->getArray(), ['Content-Type' => 'application/x-www-form-urlencoded']);
 

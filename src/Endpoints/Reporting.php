@@ -2,10 +2,11 @@
 
 namespace Villaflor\TaboolaSDK\Endpoints;
 
+use stdClass;
 use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\APIInterface;
+use Villaflor\Connection\ConfigurationsInterface;
 use Villaflor\Connection\Traits\BodyAccessorTrait;
-use Villaflor\TaboolaSDK\Configurations\PathConfigurationInterface;
 use Villaflor\TaboolaSDK\Definitions\URI;
 
 class Reporting implements APIInterface
@@ -19,21 +20,9 @@ class Reporting implements APIInterface
         $this->adapter = $adapter;
     }
 
-    public function getCampaignSummaryReport(PathConfigurationInterface $configuration): \stdClass
+    public function getCampaignSummaryReport(ConfigurationsInterface $configuration): stdClass
     {
-        return $this->getReport($configuration);
-    }
-
-    public function getTopCampaignContentReport(PathConfigurationInterface $configuration): \stdClass
-    {
-        return $this->getReport($configuration);
-    }
-
-    private function getReport(PathConfigurationInterface $configuration): \stdClass
-    {
-        $report = $this->adapter->get(URI::API_URI . $configuration->getPath(), $configuration->getArray());
-
-        $this->body = json_decode($report->getBody());
+        $this->getReport($configuration);
 
         return (object)[
             'timezone' => $this->body->timezone,
@@ -41,5 +30,24 @@ class Reporting implements APIInterface
             'recordCount' => $this->body->recordCount,
             'metadata' => $this->body->metadata,
         ];
+    }
+
+    public function getTopCampaignContentReport(ConfigurationsInterface $configuration): stdClass
+    {
+        $this->getReport($configuration);
+
+        return (object)[
+            'timezone' => $this->body->timezone,
+            'results' => $this->body->results,
+            'recordCount' => $this->body->recordCount,
+            'metadata' => $this->body->metadata,
+        ];
+    }
+
+    private function getReport(ConfigurationsInterface $configuration): void
+    {
+        $report = $this->adapter->get(URI::API_URI . $configuration->getPath(), $configuration->getArray());
+
+        $this->body = json_decode($report->getBody());
     }
 }

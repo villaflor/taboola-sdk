@@ -1,23 +1,22 @@
 <?php
 
-namespace Villaflor\TaboolaSDK\Configurations\Reporting;
+namespace Villaflor\TaboolaSDK\Configurations\Campaigns;
 
 use Villaflor\Connection\ConfigurationsInterface;
 use Villaflor\TaboolaSDK\Configurations\PathConfigurationInterface;
 use Villaflor\TaboolaSDK\Definitions\URI;
 
-class CampaignSummaryConfiguration implements PathConfigurationInterface, ConfigurationsInterface
+class AllCampaignsConfiguration implements PathConfigurationInterface, ConfigurationsInterface
 {
     private $config;
     private $pathConfig;
 
-    public function __construct(string $accountID, string $dimension, array $config)
+    public function __construct(string $accountID, array $config)
     {
         $this->config = $config;
 
         $this->pathConfig = [
             '{account_id}' => $accountID,
-            '{dimension}' => $dimension,
         ];
     }
 
@@ -28,6 +27,6 @@ class CampaignSummaryConfiguration implements PathConfigurationInterface, Config
 
     public function getPath(): string
     {
-        return strtr(URI::REPORT_CAMPAIGN_SUMMARY_URI, $this->pathConfig);
+        return strtr(URI::CAMPAIGN_ALL_CAMPAIGNS_URI, $this->pathConfig);
     }
 }
