@@ -1,0 +1,55 @@
+{
+  "last-used-rawdata-update-time": "2019-12-17 09:00:00.0",
+  "last-used-rawdata-update-time-gmt-millisec": 1576591200000,
+  "timezone": "EST",
+  "results": [
+    {
+      "date": "2019-10-26 00:00:00.0",
+      "date_end_period": "2019-10-26 00:00:00.0",
+      "clicks": 0,
+      "impressions": 154,
+      "visible_impressions": 47,
+      "spent": 0,
+      "conversions_value": 0,
+      "roas": 0,
+      "ctr": 0,
+      "vctr": 0,
+      "cpm": 0,
+      "vcpm": 0,
+      "cpc": 0,
+      "campaigns_num": 1,
+      "cpa": 0,
+      "cpa_clicks": 0,
+      "cpa_views": 0,
+      "cpa_actions_num": 0,
+      "cpa_actions_num_from_clicks": 0,
+      "cpa_actions_num_from_views": 0,
+      "cpa_conversion_rate": 0,
+      "cpa_conversion_rate_clicks": 0,
+      "cpa_conversion_rate_views": 0,
+      "currency": "USD"
+    }
+  ],
+  "recordCount": 9,
+  "metadata": {
+    "total": 9,
+    "count": 9,
+    "static_fields": [
+      {
+        "id": "date",
+        "format": null,
+        "data_type": "DATE"
+      },
+      {
+        "id": "date_end_period",
+        "format": null,
+        "data_type": "STRING"
+      },
+      {
+        "id": "clicks",
+        "format": null,
+        "data_type": "NUMERIC"
+      }
+    ]
+  }
+}

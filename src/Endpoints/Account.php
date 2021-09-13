@@ -5,7 +5,7 @@ namespace Villaflor\TaboolaSDK\Endpoints;
 use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\APIInterface;
 use Villaflor\Connection\Traits\BodyAccessorTrait;
-use Villaflor\TaboolaSDK\Variables;
+use Villaflor\TaboolaSDK\Definitions\URI;
 
 class Account implements APIInterface
 {
@@ -20,7 +20,7 @@ class Account implements APIInterface
 
     public function getAccountDetails(): \stdClass
     {
-        $accountDetails = $this->adapter->get(Variables::API_URI . 'users/current/account');
+        $accountDetails = $this->adapter->get(URI::API_URI . 'users/current/account');
 
         $this->body = json_decode($accountDetails->getBody());
 
@@ -29,7 +29,7 @@ class Account implements APIInterface
 
     public function getAdvertiserAccountsInNetwork(string $accountID): \stdClass
     {
-        $accounts = $this->adapter->get(Variables::API_URI . $accountID . '/advertisers');
+        $accounts = $this->adapter->get(URI::API_URI . $accountID . '/advertisers');
 
         $this->body = json_decode($accounts->getBody());
 
@@ -38,7 +38,7 @@ class Account implements APIInterface
 
     public function getAllowedAccounts(): \stdClass
     {
-        $accounts = $this->adapter->get(Variables::API_URI . 'users/current/allowed-accounts');
+        $accounts = $this->adapter->get(URI::API_URI . 'users/current/allowed-accounts');
 
         $this->body = json_decode($accounts->getBody());
 

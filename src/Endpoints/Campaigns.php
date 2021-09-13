@@ -5,7 +5,7 @@ namespace Villaflor\TaboolaSDK\Endpoints;
 use Villaflor\Connection\Adapter\AdapterInterface;
 use Villaflor\Connection\APIInterface;
 use Villaflor\Connection\Traits\BodyAccessorTrait;
-use Villaflor\TaboolaSDK\Variables;
+use Villaflor\TaboolaSDK\Definitions\URI;
 
 class Campaigns implements APIInterface
 {
@@ -20,7 +20,7 @@ class Campaigns implements APIInterface
 
     public function getAllCampaigns(string $accountID): \stdClass
     {
-        $campaigns = $this->adapter->get(Variables::API_URI . $accountID . '/campaigns');
+        $campaigns = $this->adapter->get(URI::API_URI . $accountID . '/campaigns');
 
         $this->body = json_decode($campaigns->getBody());
 

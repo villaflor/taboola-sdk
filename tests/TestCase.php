@@ -12,6 +12,8 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
  */
 abstract class TestCase extends BaseTestCase
 {
+    protected $accountID = 'demo-account-001';
+
     /**
      * @SuppressWarnings(PHPMD.StaticAccess)
      * Returns a PSR7 Stream for a given fixture.
