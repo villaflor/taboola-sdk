@@ -1,0 +1,71 @@
+{
+  "last-used-rawdata-update-time": "2019-12-23 02:00:00.0",
+  "last-used-rawdata-update-time-gmt-millisec": 1577084400000,
+  "timezone": "EST",
+  "results": [
+    {
+      "item": "12345678",
+      "item_name": "Sample Campaign Item 1",
+      "thumbnail_url": "http://cdn.demo-account.com/thumbnails/thumb-1.jpg",
+      "url": "http://www.demo-account.com/wedding-rings",
+      "campaign": "2345",
+      "campaign_name": "Sample Campaign 1",
+      "learning_display_status": "Learning CTR",
+      "content_provider": "123456",
+      "content_provider_name": "Content Provider 1",
+      "impressions": 61609,
+      "visible_impressions": 9148,
+      "clicks": 40,
+      "actions": 40,
+      "actions_num_from_clicks": 40,
+      "actions_num_from_views": 0,
+      "spent": 7.95,
+      "conversions_value": 0,
+      "roas": 0,
+      "ctr": 0.06,
+      "vctr": 0.44,
+      "cpc": 0.199,
+      "cvr": 100,
+      "cvr_clicks": 100,
+      "cvr_views": 0,
+      "cpa": 0.2,
+      "cpa_clicks": 0.2,
+      "cpa_views": 0,
+      "cpm": 0.13,
+      "vcpm": 0.87,
+      "currency": "USD"
+    }
+  ],
+  "recordCount": 23,
+  "metadata": {
+    "total": 23,
+    "count": 23,
+    "static_fields": [
+      {
+        "id": "item",
+        "format": null,
+        "data_type": "STRING"
+      },
+      {
+        "id": "item_name",
+        "format": null,
+        "data_type": "STRING"
+      },
+      {
+        "id": "thumbnail_url",
+        "format": null,
+        "data_type": "STRING"
+      },
+      {
+        "id": "url",
+        "format": null,
+        "data_type": "STRING"
+      },
+      {
+        "id": "campaign",
+        "format": null,
+        "data_type": "STRING"
+      }
+    ]
+  }
+}

@@ -21,6 +21,16 @@ class Reporting implements APIInterface
 
     public function getCampaignSummaryReport(PathConfigurationInterface $configuration): \stdClass
     {
+        return $this->getReport($configuration);
+    }
+
+    public function getTopCampaignContentReport(PathConfigurationInterface $configuration): \stdClass
+    {
+        return $this->getReport($configuration);
+    }
+
+    private function getReport(PathConfigurationInterface $configuration): \stdClass
+    {
         $report = $this->adapter->get(URI::API_URI . $configuration->getPath(), $configuration->getArray());
 
         $this->body = json_decode($report->getBody());

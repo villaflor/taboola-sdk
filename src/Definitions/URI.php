@@ -9,4 +9,5 @@ final class URI
     const API_URI   = 'api/1.0/';
 
     const CAMPAIGN_SUMMARY_REPORT_URI = '{account_id}/reports/campaign-summary/dimensions/{dimension}';
+    const TOP_CAMPAIGN_CONTENT_URI = '{account_id}/reports/top-campaign-content/dimensions/{dimension}';
 }
