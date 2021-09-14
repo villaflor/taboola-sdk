@@ -22,7 +22,7 @@ class Authentication implements APIInterface
 
     public function getAccessToken(ConfigurationsInterface $authenticationConfig): stdClass
     {
-        $accessToken = $this->adapter->post(URI::AUTH_URI, $authenticationConfig->getArray(), ['Content-Type' => 'application/x-www-form-urlencoded']);
+        $accessToken = $this->adapter->post(URI::AUTH_URI, ['form_params' => $authenticationConfig->getArray()], ['Content-Type' => 'application/x-www-form-urlencoded']);
 
         $this->body = json_decode($accessToken->getBody());
 
