@@ -1,50 +1,54 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Endpoints;
 
-use stdClass;
-use Villaflor\Connection\Adapter\AdapterInterface;
-use Villaflor\Connection\APIInterface;
-use Villaflor\Connection\Traits\BodyAccessorTrait;
 use Villaflor\TaboolaSDK\Configurations\PathConfigurationInterface;
 use Villaflor\TaboolaSDK\Definitions\URI;
+use Villaflor\TaboolaSDK\DTO\AccountResponse;
+use Villaflor\TaboolaSDK\DTO\CollectionResponse;
+use Villaflor\TaboolaSDK\Exceptions\JsonDecodeException;
 
-class Account implements APIInterface
+final class Account extends AbstractEndpoint
 {
-    use BodyAccessorTrait;
-
-    private AdapterInterface $adapter;
-
-    public function __construct(AdapterInterface $adapter)
+    /**
+     * @throws JsonDecodeException
+     */
+    public function getAccountDetails(PathConfigurationInterface $configuration): AccountResponse
     {
-        $this->adapter = $adapter;
+        $data = $this->fetchAccount($configuration);
+
+        return AccountResponse::fromStdClass($data);
     }
 
-    public function getAccountDetails(PathConfigurationInterface $configuration): stdClass
+    /**
+     * @throws JsonDecodeException
+     */
+    public function getAdvertiserAccountsInNetwork(PathConfigurationInterface $configuration): CollectionResponse
     {
-        $this->getAccount($configuration);
+        $data = $this->fetchAccount($configuration);
 
-        return (object)['body' => $this->body];
+        return CollectionResponse::fromStdClass($data);
     }
 
-    public function getAdvertiserAccountsInNetwork(PathConfigurationInterface $configuration): stdClass
+    /**
+     * @throws JsonDecodeException
+     */
+    public function getAllowedAccounts(PathConfigurationInterface $configuration): CollectionResponse
     {
-        $this->getAccount($configuration);
+        $data = $this->fetchAccount($configuration);
 
-        return (object)['results' => $this->body->results, 'metadata' => $this->body->metadata];
+        return CollectionResponse::fromStdClass($data);
     }
 
-    public function getAllowedAccounts(PathConfigurationInterface $configuration): stdClass
+    /**
+     * @throws JsonDecodeException
+     */
+    private function fetchAccount(PathConfigurationInterface $configuration): \stdClass
     {
-        $this->getAccount($configuration);
+        $response = $this->adapter->get(URI::API_URI . $configuration->getPath());
 
-        return (object)['results' => $this->body->results, 'metadata' => $this->body->metadata];
-    }
-
-    private function getAccount(PathConfigurationInterface $configuration): void
-    {
-        $accounts = $this->adapter->get(URI::API_URI . $configuration->getPath());
-
-        $this->body = json_decode($accounts->getBody());
+        return $this->decodeJsonResponse($response->getBody());
     }
 }

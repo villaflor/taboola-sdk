@@ -1,0 +1,92 @@
+{
+  "last-used-rawdata-update-time": "2024-12-17 09:00:00.0",
+  "last-used-rawdata-update-time-gmt-millisec": 1702807200000,
+  "timezone": "EST",
+  "results": [
+    {
+      "date": "2024-10-26 00:00:00.0",
+      "date_end_period": "2024-10-26 00:00:00.0",
+      "clicks": 250,
+      "impressions": 5000,
+      "visible_impressions": 4500,
+      "spent": 125.50,
+      "conversions_value": 500.00,
+      "roas": 3.98,
+      "ctr": 5.0,
+      "vctr": 5.56,
+      "cpm": 25.10,
+      "vcpm": 27.89,
+      "cpc": 0.50,
+      "campaigns_num": 1,
+      "cpa": 25.10,
+      "cpa_clicks": 150,
+      "cpa_views": 100,
+      "cpa_actions_num": 5,
+      "cpa_actions_num_from_clicks": 3,
+      "cpa_actions_num_from_views": 2,
+      "cpa_conversion_rate": 2.0,
+      "cpa_conversion_rate_clicks": 2.0,
+      "cpa_conversion_rate_views": 2.22,
+      "currency": "USD"
+    },
+    {
+      "date": "2024-10-27 00:00:00.0",
+      "date_end_period": "2024-10-27 00:00:00.0",
+      "clicks": 300,
+      "impressions": 6000,
+      "visible_impressions": 5400,
+      "spent": 150.00,
+      "conversions_value": 600.00,
+      "roas": 4.0,
+      "ctr": 5.0,
+      "vctr": 5.56,
+      "cpm": 25.00,
+      "vcpm": 27.78,
+      "cpc": 0.50,
+      "campaigns_num": 1,
+      "cpa": 25.00,
+      "cpa_clicks": 180,
+      "cpa_views": 120,
+      "cpa_actions_num": 6,
+      "cpa_actions_num_from_clicks": 4,
+      "cpa_actions_num_from_views": 2,
+      "cpa_conversion_rate": 2.0,
+      "cpa_conversion_rate_clicks": 2.22,
+      "cpa_conversion_rate_views": 1.67,
+      "currency": "USD"
+    }
+  ],
+  "recordCount": 2,
+  "record_count": 2,
+  "metadata": {
+    "total": 2,
+    "count": 2,
+    "static_fields": [
+      {
+        "id": "date",
+        "format": null,
+        "data_type": "DATE"
+      },
+      {
+        "id": "date_end_period",
+        "format": null,
+        "data_type": "STRING"
+      },
+      {
+        "id": "clicks",
+        "format": null,
+        "data_type": "NUMERIC"
+      },
+      {
+        "id": "impressions",
+        "format": null,
+        "data_type": "NUMERIC"
+      },
+      {
+        "id": "spent",
+        "format": null,
+        "data_type": "NUMERIC"
+      }
+    ]
+  }
+}

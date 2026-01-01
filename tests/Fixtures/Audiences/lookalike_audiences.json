@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "id": "lal-001",
+      "name": "Lookalike - High Value Customers 1%",
+      "description": "1% lookalike of high value customers",
+      "type": "LOOKALIKE",
+      "source_audience_id": "aud-001",
+      "similarity": 1,
+      "country": "US",
+      "size": 2000000,
+      "estimated_reach": 2000000,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "lal-002",
+      "name": "Lookalike - Website Visitors 5%",
+      "description": "5% lookalike of website visitors",
+      "type": "LOOKALIKE",
+      "source_audience_id": "aud-002",
+      "similarity": 5,
+      "country": "US",
+      "size": 10000000,
+      "estimated_reach": 10000000,
+      "status": "ACTIVE"
+    }
+  ]
+}

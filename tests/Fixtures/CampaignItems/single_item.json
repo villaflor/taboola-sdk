@@ -1,0 +1,18 @@
+{
+  "id": "1",
+  "campaign_id": "1234",
+  "type": "ITEM",
+  "url": "https://www.example.com/news/demo_article_1.html",
+  "thumbnail_url": "http://cdn.example.com/demo_image_1.jpg",
+  "title": "Demo Article 1",
+  "description": "This is a great article about topic 1",
+  "approval_state": "APPROVED",
+  "is_active": true,
+  "status": "RUNNING",
+  "cpc": 0.25,
+  "last_modified": "2024-01-15 10:30:00",
+  "clicks": 1250,
+  "impressions": 25000,
+  "ctr": 0.05,
+  "spent": 312.50
+}

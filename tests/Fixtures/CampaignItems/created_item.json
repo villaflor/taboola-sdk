@@ -1,0 +1,13 @@
+{
+  "id": "item-new-789",
+  "campaign_id": "1234",
+  "type": "ITEM",
+  "url": "https://www.example.com/new-article",
+  "thumbnail_url": "http://cdn.example.com/new-image.jpg",
+  "title": "New Campaign Item",
+  "description": "This is a newly created item",
+  "approval_state": "PENDING",
+  "is_active": true,
+  "status": "PENDING_APPROVAL",
+  "cpc": 0.50
+}

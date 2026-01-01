@@ -1,0 +1,14 @@
+{
+  "id": "1",
+  "campaign_id": "1234",
+  "type": "ITEM",
+  "url": "https://www.example.com/news/updated_article.html",
+  "thumbnail_url": "http://cdn.example.com/updated_image.jpg",
+  "title": "Updated Demo Article",
+  "description": "This article has been updated",
+  "approval_state": "APPROVED",
+  "is_active": true,
+  "status": "RUNNING",
+  "cpc": 0.35,
+  "last_modified": "2024-12-30 14:00:00"
+}

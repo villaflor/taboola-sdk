@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "code": "US-CA",
+      "name": "California",
+      "value": "US-CA",
+      "country_code": "US"
+    },
+    {
+      "code": "US-NY",
+      "name": "New York",
+      "value": "US-NY",
+      "country_code": "US"
+    },
+    {
+      "code": "US-TX",
+      "name": "Texas",
+      "value": "US-TX",
+      "country_code": "US"
+    },
+    {
+      "code": "US-FL",
+      "name": "Florida",
+      "value": "US-FL",
+      "country_code": "US"
+    }
+  ]
+}

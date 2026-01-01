@@ -1,0 +1,53 @@
+{
+  "timezone": "EST",
+  "results": [
+    {
+      "item_id": "101",
+      "title": "Top Performing Article 1",
+      "clicks": 5000,
+      "impressions": 50000,
+      "ctr": 10.0,
+      "spent": 1250.00,
+      "cpc": 0.25,
+      "cpa": 25.00,
+      "conversions": 50,
+      "conversions_value": 2500.00,
+      "roi": 1.0,
+      "currency": "USD"
+    },
+    {
+      "item_id": "102",
+      "title": "Top Performing Article 2",
+      "clicks": 4000,
+      "impressions": 45000,
+      "ctr": 8.89,
+      "spent": 1200.00,
+      "cpc": 0.30,
+      "cpa": 30.00,
+      "conversions": 40,
+      "conversions_value": 2000.00,
+      "roi": 0.67,
+      "currency": "USD"
+    },
+    {
+      "item_id": "103",
+      "title": "Top Performing Article 3",
+      "clicks": 3500,
+      "impressions": 40000,
+      "ctr": 8.75,
+      "spent": 1050.00,
+      "cpc": 0.30,
+      "cpa": 35.00,
+      "conversions": 30,
+      "conversions_value": 1500.00,
+      "roi": 0.43,
+      "currency": "USD"
+    }
+  ],
+  "recordCount": 3,
+  "record_count": 3,
+  "metadata": {
+    "total": 3,
+    "count": 3
+  }
+}

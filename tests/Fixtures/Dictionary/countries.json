@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "code": "US",
+      "name": "United States",
+      "value": "US"
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "value": "CA"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "value": "GB"
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "value": "AU"
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "value": "DE"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "value": "ANDROID",
+      "name": "Android"
+    },
+    {
+      "value": "IOS",
+      "name": "iOS"
+    },
+    {
+      "value": "WINDOWS",
+      "name": "Windows"
+    },
+    {
+      "value": "OSX",
+      "name": "macOS"
+    },
+    {
+      "value": "LINUX",
+      "name": "Linux"
+    }
+  ]
+}

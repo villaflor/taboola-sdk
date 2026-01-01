@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "name": "cnn.com",
+      "tier": "PREMIUM",
+      "category": "News"
+    },
+    {
+      "name": "forbes.com",
+      "tier": "PREMIUM",
+      "category": "Business"
+    },
+    {
+      "name": "espn.com",
+      "tier": "PREMIUM",
+      "category": "Sports"
+    },
+    {
+      "name": "weather.com",
+      "tier": "STANDARD",
+      "category": "Weather"
+    }
+  ]
+}

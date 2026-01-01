@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "id": "5750752",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 1",
+      "branding_text": "The best brand",
+      "cpc": 0.60,
+      "spending_limit": 150.00,
+      "spending_limit_model": "MONTHLY",
+      "status": "RUNNING",
+      "is_active": true
+    },
+    {
+      "id": "5750753",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 2",
+      "branding_text": "A great brand",
+      "cpc": 0.55,
+      "spending_limit": 200.00,
+      "spending_limit_model": "MONTHLY",
+      "status": "RUNNING",
+      "is_active": true
+    }
+  ],
+  "metadata": {
+    "total_results": 2
+  }
+}

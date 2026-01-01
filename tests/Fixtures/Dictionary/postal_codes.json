@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "code": "90210",
+      "name": "Beverly Hills, CA",
+      "value": "90210",
+      "country_code": "US"
+    },
+    {
+      "code": "10001",
+      "name": "New York, NY",
+      "value": "10001",
+      "country_code": "US"
+    },
+    {
+      "code": "94102",
+      "name": "San Francisco, CA",
+      "value": "94102",
+      "country_code": "US"
+    }
+  ]
+}

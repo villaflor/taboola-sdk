@@ -1,31 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Endpoints;
 
-use stdClass;
-use Villaflor\Connection\Adapter\AdapterInterface;
-use Villaflor\Connection\APIInterface;
 use Villaflor\Connection\ConfigurationsInterface;
-use Villaflor\Connection\Traits\BodyAccessorTrait;
 use Villaflor\TaboolaSDK\Definitions\URI;
+use Villaflor\TaboolaSDK\DTO\AuthenticationResponse;
+use Villaflor\TaboolaSDK\Exceptions\JsonDecodeException;
 
-class Authentication implements APIInterface
+final class Authentication extends AbstractEndpoint
 {
-    use BodyAccessorTrait;
-
-    private AdapterInterface $adapter;
-
-    public function __construct(AdapterInterface $adapter)
+    /**
+     * @throws JsonDecodeException
+     */
+    public function getAccessToken(ConfigurationsInterface $authenticationConfig): AuthenticationResponse
     {
-        $this->adapter = $adapter;
-    }
+        $response = $this->adapter->post(
+            URI::AUTH_URI,
+            ['form_params' => $authenticationConfig->getArray()],
+            ['Content-Type' => 'application/x-www-form-urlencoded']
+        );
 
-    public function getAccessToken(ConfigurationsInterface $authenticationConfig): stdClass
-    {
-        $accessToken = $this->adapter->post(URI::AUTH_URI, ['form_params' => $authenticationConfig->getArray()], ['Content-Type' => 'application/x-www-form-urlencoded']);
+        $data = $this->decodeJsonResponse($response->getBody());
 
-        $this->body = json_decode($accessToken->getBody());
-
-        return (object)['body' => $this->body];
+        return AuthenticationResponse::fromStdClass($data);
     }
 }

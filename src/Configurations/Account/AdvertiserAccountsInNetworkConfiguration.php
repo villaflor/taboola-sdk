@@ -1,23 +1,24 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Configurations\Account;
 
 use Villaflor\TaboolaSDK\Configurations\PathConfigurationInterface;
 use Villaflor\TaboolaSDK\Definitions\URI;
 
-class AdvertiserAccountsInNetworkConfiguration implements PathConfigurationInterface
+final readonly class AdvertiserAccountsInNetworkConfiguration implements PathConfigurationInterface
 {
-    private $pathConfig;
-
-    public function __construct(string $accountID)
-    {
-        $this->pathConfig = [
-            '{account_id}' => $accountID,
-        ];
+    public function __construct(
+        private string $accountId
+    ) {
     }
 
     public function getPath(): string
     {
-        return strtr(URI::ACCOUNT_ADVERTISER_ACCOUNTS_IN_NETWORK_URI, $this->pathConfig);
+        return strtr(
+            URI::ACCOUNT_ADVERTISER_ACCOUNTS_IN_NETWORK_URI,
+            ['{account_id}' => $this->accountId]
+        );
     }
 }

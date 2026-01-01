@@ -1,0 +1,11 @@
+{
+  "id": "5750752",
+  "advertiser_id": "demo-advertiser",
+  "name": "Updated Campaign Name",
+  "branding_text": "Updated Brand",
+  "cpc": 0.75,
+  "spending_limit": 7500,
+  "spending_limit_model": "MONTHLY",
+  "status": "RUNNING",
+  "is_active": true
+}

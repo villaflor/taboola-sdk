@@ -1,27 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Configurations;
 
 use Villaflor\Connection\ConfigurationsInterface;
 
-class AuthenticationConfiguration implements ConfigurationsInterface
+final readonly class AuthenticationConfiguration implements ConfigurationsInterface
 {
-    private array $config;
-
-    /**
-     * @param string $clientID
-     * @param string $clientSecret
-     */
-    public function __construct(string $clientID, string $clientSecret)
-    {
-        //For the Client Credentials flow, grant_type is always client_credentials.
-        $this->config['grant_type'] = 'client_credentials';
-        $this->config['client_id'] = $clientID;
-        $this->config['client_secret'] = $clientSecret;
+    public function __construct(
+        private string $clientId,
+        private string $clientSecret,
+        private string $grantType = 'client_credentials'
+    ) {
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getArray(): array
     {
-        return $this->config;
+        return [
+            'grant_type' => $this->grantType,
+            'client_id' => $this->clientId,
+            'client_secret' => $this->clientSecret,
+        ];
     }
 }

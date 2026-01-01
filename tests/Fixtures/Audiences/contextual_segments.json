@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "id": "ctx-001",
+      "name": "Automotive - New Car Buyers",
+      "category": "Automotive",
+      "description": "Users reading content about new car purchases"
+    },
+    {
+      "id": "ctx-002",
+      "name": "Finance - Investment",
+      "category": "Finance",
+      "description": "Users interested in investment content"
+    },
+    {
+      "id": "ctx-003",
+      "name": "Travel - Luxury Hotels",
+      "category": "Travel",
+      "description": "Users browsing luxury hotel content"
+    },
+    {
+      "id": "ctx-004",
+      "name": "Technology - Smartphones",
+      "category": "Technology",
+      "description": "Users reading smartphone reviews and news"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "lal-new-456",
+  "name": "New Lookalike Audience",
+  "description": "Newly created lookalike",
+  "type": "LOOKALIKE",
+  "source_audience_id": "aud-001",
+  "similarity": 1,
+  "country": "US",
+  "size": 0,
+  "estimated_reach": 1500000,
+  "status": "PROCESSING"
+}

@@ -1,53 +1,70 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Endpoints;
 
-use stdClass;
-use Villaflor\Connection\Adapter\AdapterInterface;
-use Villaflor\Connection\APIInterface;
 use Villaflor\Connection\ConfigurationsInterface;
-use Villaflor\Connection\Traits\BodyAccessorTrait;
+use Villaflor\TaboolaSDK\Configurations\PathConfigurationInterface;
 use Villaflor\TaboolaSDK\Definitions\URI;
+use Villaflor\TaboolaSDK\DTO\ReportResponse;
+use Villaflor\TaboolaSDK\Exceptions\JsonDecodeException;
 
-class Reporting implements APIInterface
+final class Reporting extends AbstractEndpoint
 {
-    use BodyAccessorTrait;
-
-    private AdapterInterface $adapter;
-
-    public function __construct(AdapterInterface $adapter)
+    /**
+     * Get campaign summary report.
+     *
+     * @throws JsonDecodeException
+     */
+    public function getCampaignSummaryReport(ConfigurationsInterface $configuration): ReportResponse
     {
-        $this->adapter = $adapter;
+        return $this->fetchReport($configuration);
     }
 
-    public function getCampaignSummaryReport(ConfigurationsInterface $configuration): stdClass
+    /**
+     * Get top campaign content report.
+     *
+     * @throws JsonDecodeException
+     */
+    public function getTopCampaignContentReport(ConfigurationsInterface $configuration): ReportResponse
     {
-        $this->getReport($configuration);
-
-        return (object)[
-            'timezone' => $this->body->timezone,
-            'results' => $this->body->results,
-            'recordCount' => $this->body->recordCount,
-            'metadata' => $this->body->metadata,
-        ];
+        return $this->fetchReport($configuration);
     }
 
-    public function getTopCampaignContentReport(ConfigurationsInterface $configuration): stdClass
+    /**
+     * Get realtime campaign report.
+     *
+     * @throws JsonDecodeException
+     */
+    public function getRealtimeCampaignReport(ConfigurationsInterface $configuration): ReportResponse
     {
-        $this->getReport($configuration);
-
-        return (object)[
-            'timezone' => $this->body->timezone,
-            'results' => $this->body->results,
-            'recordCount' => $this->body->recordCount,
-            'metadata' => $this->body->metadata,
-        ];
+        return $this->fetchReport($configuration);
     }
 
-    private function getReport(ConfigurationsInterface $configuration): void
+    /**
+     * Get realtime ads report.
+     *
+     * @throws JsonDecodeException
+     */
+    public function getRealtimeAdsReport(ConfigurationsInterface $configuration): ReportResponse
     {
-        $report = $this->adapter->get(URI::API_URI . $configuration->getPath(), $configuration->getArray());
+        return $this->fetchReport($configuration);
+    }
 
-        $this->body = json_decode($report->getBody());
+    /**
+     * @param ConfigurationsInterface&PathConfigurationInterface $configuration
+     * @throws JsonDecodeException
+     */
+    private function fetchReport(ConfigurationsInterface $configuration): ReportResponse
+    {
+        $response = $this->adapter->get(
+            URI::API_URI . $configuration->getPath(),
+            $configuration->getArray()
+        );
+
+        $data = $this->decodeJsonResponse($response->getBody());
+
+        return ReportResponse::fromStdClass($data);
     }
 }

@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "id": "rule-001",
+      "name": "Purchase Conversion",
+      "advertiser_id": "demo-advertiser",
+      "type": "URL",
+      "url_pattern": "https://example.com/thank-you",
+      "value": 50.00,
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "rule-002",
+      "name": "Lead Form Submission",
+      "advertiser_id": "demo-advertiser",
+      "type": "EVENT",
+      "event_name": "lead_submit",
+      "value": 10.00,
+      "currency": "USD",
+      "status": "ACTIVE"
+    }
+  ],
+  "metadata": {
+    "total_results": 2
+  }
+}

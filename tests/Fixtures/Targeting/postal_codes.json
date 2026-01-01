@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "postal_code": "90210",
+      "city": "Beverly Hills",
+      "state": "CA"
+    },
+    {
+      "postal_code": "10001",
+      "city": "New York",
+      "state": "NY"
+    },
+    {
+      "postal_code": "94102",
+      "city": "San Francisco",
+      "state": "CA"
+    }
+  ]
+}

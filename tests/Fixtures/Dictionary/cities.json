@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "code": "US-CA-LA",
+      "name": "Los Angeles",
+      "value": "Los Angeles",
+      "country_code": "US",
+      "region_code": "US-CA"
+    },
+    {
+      "code": "US-CA-SF",
+      "name": "San Francisco",
+      "value": "San Francisco",
+      "country_code": "US",
+      "region_code": "US-CA"
+    },
+    {
+      "code": "US-NY-NYC",
+      "name": "New York City",
+      "value": "New York City",
+      "country_code": "US",
+      "region_code": "US-NY"
+    }
+  ]
+}

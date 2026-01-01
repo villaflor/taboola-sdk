@@ -1,0 +1,21 @@
+{
+  "id": "1234567",
+  "advertiser_id": "demo-advertiser",
+  "name": "New Test Campaign",
+  "branding_text": "Test Brand",
+  "cpc": 0.50,
+  "spending_limit": 100.0,
+  "spending_limit_model": "MONTHLY",
+  "bid_strategy": "FIXED",
+  "marketing_objective": "DRIVE_WEBSITE_TRAFFIC",
+  "status": "PENDING_APPROVAL",
+  "is_active": false,
+  "tracking_code": "utm_source=taboola&utm_campaign=test",
+  "country_targeting": {
+    "type": "INCLUDE",
+    "value": ["US"]
+  },
+  "publisher_targeting": {
+    "type": "ALL"
+  }
+}

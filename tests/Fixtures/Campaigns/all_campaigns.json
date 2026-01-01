@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "id": "5750752",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 1",
+      "branding_text": "The best brand",
+      "tracking_code": "utm_source=taboola&utm_medium=referral",
+      "pricing_model": "CPC",
+      "cpc": 0.25,
+      "safety_rating": null,
+      "daily_cap": 100,
+      "daily_ad_delivery_model": "STRICT",
+      "spending_limit": 5000,
+      "spending_limit_model": "MONTHLY",
+      "status": "RUNNING",
+      "is_active": true,
+      "start_date": "2024-01-01 00:00:00",
+      "end_date": "2024-12-31 23:59:59"
+    },
+    {
+      "id": "5750753",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 2",
+      "branding_text": "A great brand",
+      "tracking_code": "utm_source=taboola&utm_medium=referral",
+      "pricing_model": "CPC",
+      "cpc": 0.4,
+      "safety_rating": null,
+      "daily_cap": 200,
+      "daily_ad_delivery_model": "STRICT",
+      "spending_limit": 5000,
+      "spending_limit_model": "MONTHLY",
+      "status": "RUNNING",
+      "is_active": true,
+      "start_date": "2024-01-01 00:00:00",
+      "end_date": "2024-12-31 23:59:59"
+    },
+    {
+      "id": "5750754",
+      "advertiser_id": "demo-advertiser",
+      "name": "Demo Campaign 3",
+      "branding_text": "Brand Three",
+      "tracking_code": "utm_source=taboola&utm_campaign=demo3",
+      "pricing_model": "CPC",
+      "cpc": 0.35,
+      "safety_rating": null,
+      "daily_cap": 150,
+      "daily_ad_delivery_model": "BALANCED",
+      "spending_limit": 3000,
+      "spending_limit_model": "ENTIRE",
+      "status": "PAUSED",
+      "is_active": false,
+      "start_date": "2024-02-01 00:00:00",
+      "end_date": "2024-11-30 23:59:59"
+    }
+  ],
+  "metadata": {
+    "total_results": 3
+  }
+}

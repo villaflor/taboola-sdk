@@ -1,0 +1,12 @@
+{
+  "id": "9876543",
+  "advertiser_id": "demo-advertiser",
+  "name": "Copy of Demo Campaign 1",
+  "branding_text": "The best brand",
+  "cpc": 0.25,
+  "spending_limit": 5000,
+  "spending_limit_model": "MONTHLY",
+  "status": "PAUSED",
+  "is_active": false,
+  "tracking_code": "utm_source=taboola&utm_medium=referral"
+}

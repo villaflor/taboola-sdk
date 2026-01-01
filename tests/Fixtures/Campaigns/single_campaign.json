@@ -1,0 +1,31 @@
+{
+  "id": "5750752",
+  "advertiser_id": "demo-advertiser",
+  "name": "Demo Campaign 1",
+  "branding_text": "The best brand",
+  "tracking_code": "utm_source=taboola&utm_medium=referral",
+  "pricing_model": "CPC",
+  "cpc": 0.25,
+  "safety_rating": null,
+  "daily_cap": 100,
+  "daily_ad_delivery_model": "STRICT",
+  "spending_limit": 5000,
+  "spending_limit_model": "MONTHLY",
+  "status": "RUNNING",
+  "is_active": true,
+  "start_date": "2024-01-01 00:00:00",
+  "end_date": "2024-12-31 23:59:59",
+  "country_targeting": {
+    "type": "INCLUDE",
+    "value": ["US", "CA", "GB"]
+  },
+  "publisher_targeting": {
+    "type": "ALL"
+  },
+  "platform_targeting": {
+    "type": "INCLUDE",
+    "value": ["DESK", "PHON", "TBLT"]
+  },
+  "marketing_objective": "DRIVE_WEBSITE_TRAFFIC",
+  "bid_strategy": "FIXED"
+}

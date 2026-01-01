@@ -1,8 +1,11 @@
 <?php
 
+
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Definitions;
 
 final class TopCampaignContentDimensionDefinition
 {
-    const ITEM_BREAKDOWN = 'item_breakdown';
+    public const ITEM_BREAKDOWN = 'item_breakdown';
 }

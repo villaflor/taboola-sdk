@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "id": "advertiser-001",
+      "name": "Advertiser Account 1",
+      "type": "ADVERTISER",
+      "currency": "USD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "advertiser-002",
+      "name": "Advertiser Account 2",
+      "type": "ADVERTISER",
+      "currency": "EUR",
+      "status": "ACTIVE"
+    }
+  ],
+  "metadata": {
+    "total_results": 2
+  }
+}

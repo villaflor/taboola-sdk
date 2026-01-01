@@ -1,0 +1,12 @@
+{
+  "results": [
+    {
+      "name": "blocked-site-1.com",
+      "reason": "Low performance"
+    },
+    {
+      "name": "blocked-site-2.com",
+      "reason": "Brand safety"
+    }
+  ]
+}

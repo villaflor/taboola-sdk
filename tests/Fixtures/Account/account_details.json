@@ -1,0 +1,11 @@
+{
+  "id": "demo-advertiser",
+  "name": "Demo Advertiser Account",
+  "type": "ADVERTISER",
+  "account_id": "demo-advertiser",
+  "partner_types": ["ADVERTISER"],
+  "currency": "USD",
+  "timezone": "America/New_York",
+  "status": "ACTIVE",
+  "created_date": "2020-01-15 10:00:00"
+}

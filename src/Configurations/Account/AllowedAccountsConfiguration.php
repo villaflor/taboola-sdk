@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Configurations\Account;
 
 use Villaflor\TaboolaSDK\Configurations\PathConfigurationInterface;
 use Villaflor\TaboolaSDK\Definitions\URI;
 
-class AllowedAccountsConfiguration implements PathConfigurationInterface
+final readonly class AllowedAccountsConfiguration implements PathConfigurationInterface
 {
     public function getPath(): string
     {

@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Villaflor\TaboolaSDK\Definitions;
 
 final class PlatformDefinition
 {
-    const DESKTOP = 'DESK';
-    const PHONE = 'PHON';
-    const TABLET = 'TBLT';
+    public const DESKTOP = 'DESK';
+    public const PHONE = 'PHON';
+    public const TABLET = 'TBLT';
 }

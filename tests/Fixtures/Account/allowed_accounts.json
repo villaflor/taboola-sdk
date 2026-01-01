@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "id": "account-001",
+      "name": "Account 1",
+      "type": "ADVERTISER",
+      "partner_types": ["ADVERTISER"]
+    },
+    {
+      "id": "account-002",
+      "name": "Account 2",
+      "type": "ADVERTISER",
+      "partner_types": ["ADVERTISER"]
+    },
+    {
+      "id": "account-003",
+      "name": "Account 3",
+      "type": "PUBLISHER",
+      "partner_types": ["PUBLISHER"]
+    }
+  ],
+  "metadata": {
+    "total_results": 3
+  }
+}

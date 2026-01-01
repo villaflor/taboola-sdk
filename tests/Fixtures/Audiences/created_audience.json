@@ -1,0 +1,15 @@
+{
+  "id": "aud-new-123",
+  "name": "New Custom Audience",
+  "description": "Newly created audience",
+  "type": "CUSTOM",
+  "size": 0,
+  "status": "PENDING",
+  "match_rate": 0,
+  "created_at": "2024-12-30 14:00:00",
+  "updated_at": "2024-12-30 14:00:00",
+  "audience_source": {
+    "type": "CRM_DATA",
+    "match_type": "EMAIL"
+  }
+}

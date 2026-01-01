@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": "tax-001",
+      "name": "Product Images",
+      "type": "CATEGORY",
+      "count": 150
+    },
+    {
+      "id": "tax-002",
+      "name": "Promotional Banners",
+      "type": "CATEGORY",
+      "count": 75
+    },
+    {
+      "id": "tax-003",
+      "name": "Lifestyle Photos",
+      "type": "CATEGORY",
+      "count": 200
+    }
+  ]
+}

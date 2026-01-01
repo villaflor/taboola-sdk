@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "1",
+      "campaign_id": "1234",
+      "title": "Updated Item 1",
+      "cpc": 0.45,
+      "is_active": false,
+      "status": "PAUSED"
+    },
+    {
+      "id": "2",
+      "campaign_id": "1234",
+      "title": "Updated Item 2",
+      "cpc": 0.50,
+      "is_active": false,
+      "status": "PAUSED"
+    }
+  ],
+  "metadata": {
+    "total_results": 2
+  }
+}

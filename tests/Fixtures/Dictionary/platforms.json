@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "value": "DESK",
+      "name": "Desktop"
+    },
+    {
+      "value": "PHON",
+      "name": "Phone"
+    },
+    {
+      "value": "TBLT",
+      "name": "Tablet"
+    }
+  ]
+}

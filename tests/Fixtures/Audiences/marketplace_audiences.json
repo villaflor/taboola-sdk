@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "id": "mkt-aud-001",
+      "name": "Auto Intenders",
+      "description": "Users in market for automotive purchases",
+      "category": "Automotive",
+      "provider": "Taboola",
+      "reach": 5000000,
+      "cpm": 2.50
+    },
+    {
+      "id": "mkt-aud-002",
+      "name": "Tech Enthusiasts",
+      "description": "Users interested in technology and gadgets",
+      "category": "Technology",
+      "provider": "Third Party Data",
+      "reach": 10000000,
+      "cpm": 3.00
+    },
+    {
+      "id": "mkt-aud-003",
+      "name": "Luxury Shoppers",
+      "description": "High-income users interested in luxury goods",
+      "category": "Shopping",
+      "provider": "Taboola",
+      "reach": 2000000,
+      "cpm": 5.00
+    }
+  ]
+}

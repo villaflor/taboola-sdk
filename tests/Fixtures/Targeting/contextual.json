@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "id": "ctx-auto-001",
+      "name": "Automotive - New Cars",
+      "category": "Automotive"
+    },
+    {
+      "id": "ctx-tech-001",
+      "name": "Technology - Smartphones",
+      "category": "Technology"
+    },
+    {
+      "id": "ctx-fin-001",
+      "name": "Finance - Investment",
+      "category": "Finance"
+    }
+  ]
+}

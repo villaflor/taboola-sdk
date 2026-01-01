@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "id": "101",
+      "campaign_id": "1234",
+      "type": "ITEM",
+      "url": "https://www.example.com/article-1",
+      "thumbnail_url": "http://cdn.example.com/image-1.jpg",
+      "title": "New Item 1",
+      "description": "Description for item 1",
+      "approval_state": "PENDING",
+      "is_active": true,
+      "status": "PENDING_APPROVAL"
+    },
+    {
+      "id": "102",
+      "campaign_id": "1234",
+      "type": "ITEM",
+      "url": "https://www.example.com/article-2",
+      "thumbnail_url": "http://cdn.example.com/image-2.jpg",
+      "title": "New Item 2",
+      "description": "Description for item 2",
+      "approval_state": "PENDING",
+      "is_active": true,
+      "status": "PENDING_APPROVAL"
+    }
+  ],
+  "metadata": {
+    "total_results": 2
+  }
+}
