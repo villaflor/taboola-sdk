@@ -1,0 +1,13 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: src/Endpoints/AbstractEndpoint.php
+
+		-
+			message: '#^Parameter \#1 \$configuration of method Villaflor\\TaboolaSDK\\Endpoints\\Reporting\:\:fetchReport\(\) expects Villaflor\\Connection\\ConfigurationsInterface&Villaflor\\TaboolaSDK\\Configurations\\PathConfigurationInterface, Villaflor\\Connection\\ConfigurationsInterface given\.$#'
+			identifier: argument.type
+			count: 4
+			path: src/Endpoints/Reporting.php

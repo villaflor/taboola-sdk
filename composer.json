@@ -1,8 +1,33 @@
 {
     "name": "villaflor/taboola-sdk",
-    "description": "This package contains the open source PHP SDK that allows you to access the Taboola Platform from you PHP application.",
-    "type": "library",
+    "description": "This package contains the open source PHP SDK that allows you to access the Taboola Platform from your PHP application.",
+    "keywords": [
+        "villaflor",
+        "taboola",
+        "taboola-sdk",
+        "api",
+        "sdk"
+    ],
+    "homepage": "https://github.com/villaflor/taboola-sdk",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Anthony Villaflor",
+            "email": "villaflor@live.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-json": "*",
+        "villaflor/connection": "^5.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.26",
+        "mockery/mockery": "^1.6",
+        "pestphp/pest": "^3.8",
+        "phpstan/phpstan": "^2.1"
+    },
     "autoload": {
         "psr-4": {
             "Villaflor\\TaboolaSDK\\": "src"
@@ -13,28 +38,19 @@
             "Villaflor\\TaboolaSDK\\Tests\\": "tests"
         }
     },
-    "authors": [
-        {
-            "name": "Mark Anthony Villaflor",
-            "email": "villaflor@live.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.1",
-        "phpmd/phpmd": "@stable",
-        "phpunit/phpunit": "^9.5",
-        "roave/security-advisories": "dev-latest"
-    },
-    "require": {
-        "php": "^7.4|^8.0",
-        "ext-json": "*",
-        "guzzlehttp/guzzle": "^7.3",
-        "villaflor/connection": "^1.0"
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
     },
     "config": {
-        "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
-    }
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
